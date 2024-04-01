@@ -7,3 +7,8 @@
    SELECT *
      FROM recipes R,
           assignments A;
+
+-- String matching
+SELECT recipes.year
+FROM recipes
+WHERE recipes.name LIKE 'C%';
