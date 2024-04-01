@@ -1,19 +1,3 @@
-   SELECT DISTINCT I.iid,
-          I.name
-     FROM ingredients I,
-          assignments A,
-          recipes R
-    WHERE I.iid = A.iid
-      AND R.rid = A.rid
-      AND R.name = 'Spiced Pumpkin Soup'
-
-UNION
-
-   SELECT DISTINCT I.iid,
-          I.name
-     FROM ingredients I,
-          assignments A,
-          recipes R
-    WHERE I.iid = A.iid
-      AND R.rid = A.rid
-      AND R.name = 'Sugar Cookie Icing';
+  SELECT A.iid, MAX(A.servings)
+    FROM assignments A
+   GROUP BY A.iid;
