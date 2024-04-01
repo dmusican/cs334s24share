@@ -1,4 +1,5 @@
-  SELECT I.iid, I.name, COUNT(*) AS count
-    FROM ingredients I, assignments A
-    WHERE I.iid=A.iid AND I.cal >= 100
-   GROUP BY I.iid, I.name;
+  SELECT 10 * (R.year / 10) AS decade, AVG(rating)
+    FROM recipes R
+   WHERE length(R.name) > 20
+   GROUP BY decade
+  HAVING AVG(rating) < 8.0;
