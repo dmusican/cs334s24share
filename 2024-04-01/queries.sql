@@ -1,5 +1,4 @@
-SELECT A.iid, I.name, MAX(A.servings)
-  FROM assignments A, ingredients I
-  WHERE A.iid=I.iid
- GROUP BY A.iid, I.name
-HAVING COUNT(*) >= 2;
+  SELECT I.iid, I.name, COUNT(*) AS count
+    FROM ingredients I, assignments A
+    WHERE I.iid=A.iid AND I.cal >= 100
+   GROUP BY I.iid, I.name;
