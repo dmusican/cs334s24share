@@ -1,3 +1,4 @@
-  SELECT A.iid, MAX(A.servings)
-    FROM assignments A
+  SELECT A.iid, I.name, MAX(A.servings)
+    FROM assignments A, ingredients I
+    WHERE A.iid=I.iid
    GROUP BY A.iid;
