@@ -1,6 +1,6 @@
 -- Find ingredients in both spiced pumpkin soup
 -- and also sugar cookie icing
-   SELECT I.iid,
+   SELECT DISTINCT I.iid,
           I.name
      FROM ingredients I,
           assignments A,
