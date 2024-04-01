@@ -9,6 +9,6 @@
           assignments A;
 
 -- String matching
-SELECT recipes.year, recipes.year-5
+SELECT recipes.year, recipes.year-5 AS years5ago
 FROM recipes
 WHERE recipes.name LIKE 'C%';
