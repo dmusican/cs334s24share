@@ -5,5 +5,5 @@
 select I.iid, I.name, max(A.servings) as maxservings
 from   assignments A, ingredients I
 where  A.iid=I.iid
-group by I.iid, I.name
-where max(A.servings) > 2;
+and max(A.servings) > 2
+group by I.iid, I.name;
