@@ -1,12 +1,8 @@
 -- Aggregation goodness
-   SELECT max(R.year) AS maxyear
+   SELECT max(R.year) as maxyear
      FROM recipes R;
 
-   SELECT I.iid,
-          I.name,
-          max(A.servings)
-     FROM assignments A,
-          ingredients I
-    WHERE A.iid = I.iid
- GROUP BY I.iid,
-          I.name;
+select I.iid, I.name, max(A.servings)
+from   assignments A, ingredients I
+where  A.iid=I.iid
+group by I.iid, I.name;
