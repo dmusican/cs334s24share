@@ -9,4 +9,4 @@
           ingredients I
     WHERE A.iid = I.iid
  GROUP BY I.iid,
-          I.name
+          I.name;
