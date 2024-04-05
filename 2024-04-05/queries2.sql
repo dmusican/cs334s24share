@@ -70,6 +70,7 @@ explain SELECT I.name
 --  WHERE I.iid  partialresults;
        
 -- Find all assignments where servings = max
+create view maxstuff(servings) as
 select max(servings)
 from assignments;
 
