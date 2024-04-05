@@ -42,4 +42,14 @@ SELECT I.name
 -- run the outer query and for each value in it,
 -- .... run the subquery
 -- think nested loop
+-- FIRST ITERATION: first row of ingredients
+-- subquery is
+-- SELECT A.iid
+-- FROM assignments A
+-- WHERE A.rid=4 AND 0=A.iid;
+-- this result is empty, so WHERE EXISTS fails
+-- and so tuple is not emitted
+--... for each tuple in ingredients
+
+
 
