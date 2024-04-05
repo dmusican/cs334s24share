@@ -37,3 +37,8 @@ SELECT I.name
         FROM assignments A
         WHERE A.rid=4
           AND I.iid=A.iid);
+
+-- above is a correlated subquery
+-- run the outer query and for each value in it,
+-- .... run the subquery
+
