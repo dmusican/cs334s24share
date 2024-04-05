@@ -60,7 +60,7 @@ SELECT I.name
           FROM assignments A
          WHERE A.rid=4);
 
-CREATE VIEW partialresults(rid) AS
+CREATE VIEW partialresults(iid) AS
 SELECT A.iid
   FROM assignments A
  WHERE A.rid=4;
