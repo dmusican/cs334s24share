@@ -5,5 +5,4 @@
  
 SELECT R.name
   FROM recipes R
-  JOIN assignments A USING (rid)
- WHERE A.rid=3;
+  JOIN assignments A USING (rid);
