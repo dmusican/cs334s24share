@@ -75,7 +75,7 @@ select max(servings)
 from assignments;
 
 select *
-from assignments A, ^^^that other relation^^^ M
+from assignments A, maxstuff M
 where A.servings = M.servings;
 
 
