@@ -12,3 +12,5 @@ SELECT R.rid, R.name, A.aid
   FROM recipes R
   LEFT OUTER JOIN assignments A USING (rid)
   WHERE A.aid IS NULL;
+
+-- also have RIGHT OUTER JOIN, FULL OUTER JOIN
