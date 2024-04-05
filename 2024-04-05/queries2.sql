@@ -30,7 +30,6 @@ SELECT I.name
 -- results of the subquery
 
 
-
 SELECT I.name
   FROM ingredients I
  WHERE EXISTS
