@@ -14,3 +14,27 @@ SELECT R.rid, R.name, A.aid
   WHERE A.aid IS NULL;
 
 -- also have RIGHT OUTER JOIN, FULL OUTER JOIN
+
+
+SELECT I.name
+  FROM ingredients I
+ WHERE I.iid IN 
+       (SELECT A.iid
+          FROM assignments A
+         WHERE A.rid=4);
+
+-- runs the subquery: getting all iids where rid is 4
+--- so i get iids of 2 and 3
+-- so, then goes to outer, gets me all ingredients
+-- with iids of 2 and 3, because those are IN the
+-- results of the subquery
+
+
+
+SELECT I.name
+  FROM ingredients I
+ WHERE EXISTS
+       (SELECT A.iid
+        FROM assignments A
+        WHERE A.rid=4
+          AND I.iid=A.iid);
