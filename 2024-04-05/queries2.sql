@@ -79,5 +79,12 @@ from assignments A, maxstuff M
 where A.servings = M.servings;
 
 
+with maxstuff2(servings) as (
+  select max(servings)
+  from assignments
+)
+select *
+from assignments A, maxstuff2 M
+where A.servings = M.servings;
 
 
