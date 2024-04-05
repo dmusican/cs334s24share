@@ -16,7 +16,7 @@ SELECT R.rid, R.name, A.aid
 -- also have RIGHT OUTER JOIN, FULL OUTER JOIN
 
 
-SELECT I.name
+explain SELECT I.name
   FROM ingredients I
  WHERE I.iid IN 
        (SELECT A.iid
@@ -30,7 +30,7 @@ SELECT I.name
 -- results of the subquery
 
 
-SELECT I.name
+explain SELECT I.name
   FROM ingredients I
  WHERE EXISTS
        (SELECT A.iid
