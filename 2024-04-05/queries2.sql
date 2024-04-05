@@ -62,8 +62,8 @@ SELECT I.name
 
 CREATE VIEW partialresults(rid) AS
 SELECT A.iid
-          FROM assignments A
-         WHERE A.rid=4;
+  FROM assignments A
+ WHERE A.rid=4;
 
 SELECT I.name
   FROM ingredients I
