@@ -52,20 +52,23 @@ explain SELECT I.name
 --... for each tuple in ingredients
 
 
--- Making subqueries more readable
-SELECT I.name
-  FROM ingredients I
- WHERE I.iid IN 
-       (SELECT A.iid
-          FROM assignments A
-         WHERE A.rid=4);
+-- -- Making subqueries more readable
+-- SELECT I.name
+--   FROM ingredients I
+--  WHERE I.iid IN 
+--        (SELECT A.iid
+--           FROM assignments A
+--          WHERE A.rid=4);
 
-CREATE VIEW partialresults(iid) AS
-SELECT A.iid
-  FROM assignments A
- WHERE A.rid=4;
+-- CREATE VIEW partialresults(iid) AS
+-- SELECT A.iid
+--   FROM assignments A
+--  WHERE A.rid=4;
 
-SELECT I.name
-  FROM ingredients I
- WHERE I.iid IN partialresults;
+-- SELECT I.name
+--   FROM ingredients I
+--  WHERE I.iid  partialresults;
        
+-- Find all assignments where servings = max
+select max(servings)
+from assignments;
