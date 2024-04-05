@@ -41,4 +41,5 @@ SELECT I.name
 -- above is a correlated subquery
 -- run the outer query and for each value in it,
 -- .... run the subquery
+-- think nested loop
 
