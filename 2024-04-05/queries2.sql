@@ -72,3 +72,9 @@ explain SELECT I.name
 -- Find all assignments where servings = max
 select max(servings)
 from assignments;
+
+select *
+from assignments A, ^^^that other relation^^^ M
+where A.servings = M.servings;
+
+
