@@ -11,4 +11,4 @@ SELECT R.rid, R.name, A.aid
 SELECT R.rid, R.name, A.aid
   FROM recipes R
   LEFT OUTER JOIN assignments A USING (rid)
-  WHERE R.rid IS NULL;
+  WHERE A.aid IS NULL;
