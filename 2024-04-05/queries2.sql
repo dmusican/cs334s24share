@@ -6,3 +6,9 @@
 SELECT R.rid, R.name, A.aid
   FROM recipes R
   LEFT OUTER JOIN assignments A USING (rid);
+
+-- Find all recipes that have no ingredient assignments
+SELECT R.rid, R.name, A.aid
+  FROM recipes R
+  LEFT OUTER JOIN assignments A USING (rid)
+  WHERE R.rid IS NULL;
