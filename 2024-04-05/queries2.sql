@@ -5,4 +5,4 @@
  
 SELECT R.rid, R.name
   FROM recipes R
-  JOIN assignments A USING (rid);
+  LEFT OUTER JOIN assignments A USING (rid);
