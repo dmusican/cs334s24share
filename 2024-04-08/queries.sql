@@ -6,8 +6,9 @@ CREATE TABLE immediate_prereqs (
 
 INSERT INTO immediate_prereqs VALUES ('CS111', 'CS201');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS257');
-INSERT INTO immediate_prereqs VALUES ('CS257', 'CS347');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS251');
+INSERT INTO immediate_prereqs VALUES ('CS251', 'CS257');
+INSERT INTO immediate_prereqs VALUES ('CS257', 'CS347');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS344');
 
 -- Just to get second level of prereqs
