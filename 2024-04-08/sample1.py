@@ -11,7 +11,7 @@ query = "SELECT * FROM RECIPES";
 #              FROM recipes
 #             WHERE name='"""  + name + "'"
 
-print(query)
+#print(query)-
 cur.execute(query)
 for row in cur:
     print(row)
