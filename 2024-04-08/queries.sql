@@ -11,20 +11,20 @@ INSERT INTO immediate_prereqs VALUES ('CS201', 'CS251');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS344');
 
 -- Just to get second level of prereqs
-SELECT IP1.prereq_id, IP2.course_id
-FROM immediate_prereqs IP1,
-     immediate_prereqs IP2
-WHERE IP1.course_id = IP2.prereq_id;
+-- SELECT IP1.prereq_id, IP2.course_id
+-- FROM immediate_prereqs IP1,
+--      immediate_prereqs IP2
+-- WHERE IP1.course_id = IP2.prereq_id;
 
 -- Before getting all of them, let's just combine the originals
 -- and the new ones
-SELECT *
-FROM immediate_prereqs
-UNION
-SELECT IP1.prereq_id, IP2.course_id
-FROM immediate_prereqs IP1,
-     immediate_prereqs IP2
-WHERE IP1.course_id = IP2.prereq_id;
+-- SELECT *
+-- FROM immediate_prereqs
+-- UNION
+-- SELECT IP1.prereq_id, IP2.course_id
+-- FROM immediate_prereqs IP1,
+--      immediate_prereqs IP2
+-- WHERE IP1.course_id = IP2.prereq_id;
 
 -- So, now, all of them!
 WITH RECURSIVE all_reqs (prereq_id, course_id) AS (
