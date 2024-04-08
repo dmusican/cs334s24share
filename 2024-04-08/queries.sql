@@ -34,7 +34,7 @@ WITH RECURSIVE all_reqs (prereq_id, course_id) AS (
         SELECT AR.prereq_id, IP.course_id
         FROM   all_reqs AR,
                immediate_prereqs IP
-        WHERE  AR.course_id = IP.course_id
+        WHERE  AR.course_id = IP.prereq_id
 )
 SELECT *
 FROM all_reqs;
