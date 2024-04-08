@@ -11,7 +11,7 @@ INSERT INTO immediate_prereqs VALUES ('CS201', 'CS251');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS344');
 
 -- Just to get second level of prereqs
-SELECT 
+SELECT jlkjlk
 FROM immediate_prereqs IP1,
      immediate_prereqs IP2
 WHERE IP1.course_id = IP2.prereq_id;
