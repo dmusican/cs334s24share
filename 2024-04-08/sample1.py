@@ -7,7 +7,8 @@ cur = conn.cursor()
 desired_name = input('Which recipe? ')
 
 # The bad way
-query = "SELECT * FROM recipes WHERE name =" + desired_name
+query = "SELECT * FROM recipes WHERE name = '" + \
+         desired_name + "'"
 print(query)
 
 # query = """SELECT *
