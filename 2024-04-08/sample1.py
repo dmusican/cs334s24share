@@ -11,12 +11,7 @@ query = "SELECT * FROM recipes WHERE name = '" + \
          desired_name + "'"
 print(query)
 
-# query = """SELECT *
-#              FROM recipes
-#             WHERE name='"""  + name + "'"
-
-# #print(query)-
-# cur.execute(query)
-# for row in cur:
-#     print(row)
+cur.execute(query)
+for row in cur:
+    print(row)
                
