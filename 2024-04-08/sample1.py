@@ -6,7 +6,8 @@ cur = conn.cursor()
 
 query = "SELECT * FROM RECIPES";
 
-# name = input('Which recipe? ')
+name = input('Which recipe? ')
+
 # query = """SELECT *
 #              FROM recipes
 #             WHERE name='"""  + name + "'"
