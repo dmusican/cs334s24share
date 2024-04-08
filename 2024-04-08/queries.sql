@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS immediate_prereqs;
 CREATE TABLE immediate_prereqs (
     prereq_id varchar(10),
     course_id varchar(10)
