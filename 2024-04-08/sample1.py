@@ -1,7 +1,7 @@
 import psycopg2
 import getpass
 
-conn = psycopg2.connect("user=dmusicant dbname=dmusicant")
+conn = psycopg2.connect("user=csuser dbname=csuser")
 
 cur = conn.cursor()
 
