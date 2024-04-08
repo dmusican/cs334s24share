@@ -10,6 +10,7 @@ INSERT INTO immediate_prereqs VALUES ('CS201', 'CS251');
 --INSERT INTO immediate_prereqs VALUES ('CS251', 'CS257');
 INSERT INTO immediate_prereqs VALUES ('CS257', 'CS347');
 INSERT INTO immediate_prereqs VALUES ('CS201', 'CS344');
+INSERT INTO immediate_prereqs VALUES ('CS111', 'CS111');
 
 -- Just to get second level of prereqs
 -- SELECT IP1.prereq_id, IP2.course_id
