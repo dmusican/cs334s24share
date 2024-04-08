@@ -15,3 +15,13 @@ SELECT IP1.prereq_id, IP2.course_id
 FROM immediate_prereqs IP1,
      immediate_prereqs IP2
 WHERE IP1.course_id = IP2.prereq_id;
+
+-- Before getting all of them, let's just combine the originals
+-- and the new ones
+SELECT *
+FROM immediate_prereqs
+UNION
+SELECT IP1.prereq_id, IP2.course_id
+FROM immediate_prereqs IP1,
+     immediate_prereqs IP2
+WHERE IP1.course_id = IP2.prereq_id;
