@@ -27,7 +27,7 @@ FROM immediate_prereqs IP1,
 WHERE IP1.course_id = IP2.prereq_id;
 
 -- So, now, all of them!
-WITH RECURSIVE all_reqs (prereq_id, course_id) AS
+WITH RECURSIVE all_reqs (prereq_id, course_id) AS (
        SELECT  prereq_id, course_id
         FROM   immediate_prereqs
         UNION 
@@ -35,6 +35,9 @@ WITH RECURSIVE all_reqs (prereq_id, course_id) AS
         FROM   all_reqs AR,
                immediate_prereqs IP
         WHERE  AR.course_id = IP.course_id
+)
+SELECT *
+FROM all_reqs;
 
 
 
