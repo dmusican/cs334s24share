@@ -27,7 +27,7 @@ INSERT INTO immediate_prereqs VALUES ('CS201', 'CS344');
 -- WHERE IP1.course_id = IP2.prereq_id;
 
 -- So, now, all of them!
-EXPLAIN WITH RECURSIVE all_reqs (prereq_id, course_id) AS (
+WITH RECURSIVE all_reqs (prereq_id, course_id) AS (
        SELECT  prereq_id, course_id
         FROM   immediate_prereqs
         UNION ALL
