@@ -1,5 +1,4 @@
 import psycopg2
-import getpass
 
 conn = psycopg2.connect("user=csuser dbname=csuser")
 
